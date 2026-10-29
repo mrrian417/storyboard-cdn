@@ -1897,7 +1897,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return records.slice().sort((a, b) => b.updatedAt - a.updatedAt).slice(max).map(r => r.id);
   };
   window.historyDataURIParts = function (uri) {
-    const m = /^data:([^;,]+);base64,/i.exec(uri || '');
+    const m = /^data:([^;,]+);base64,/i.(uri || '');
     return m ? { mime: m[1], b64: uri.slice(m[0].length) } : null;
   };
   // === END HISTORY ENGINE ===
@@ -6709,7 +6709,7 @@ OUTPUT: generate ONLY the actual scene — the person from the reference photo s
 
   // === LOGIN SYSTEM (lisensi via GAS + Sheet) ===
   const LOGIN_CFG = {
-    SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwQpKKxXYSLOKD6DOufkBoB4zbNiYaDfIMlyXX0vI7ALLiJhzV8flkWFerC8eqqftHS/exec",
+    SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwFfTo6p1IZszeQPDtzHHQjSfJ0ipQNWZb4nBmoes8RoqKRjcGWbePro2zVnA98Q58L/exec",
     APP_SECRET: "03MOMUYHFoXdQ40YB6G3Q0yVl8Y5",
     PRODUCT_ID: "storyboard-studio-pro",
     BUY_LYNK_URL: "YOUR-LYNK-URL",
